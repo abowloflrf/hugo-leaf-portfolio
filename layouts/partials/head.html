@@ -1,0 +1,27 @@
+<head>
+
+    <meta charset="utf-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {{- if eq .URL "/" }}
+    <meta name="description" content="{{ .Site.Params.Description }}">
+    {{- else if .Description }}
+    <meta name="description" content="{{ .Description }}">
+    {{- end }}
+
+    <title>
+        {{- if eq .URL "/" }}
+        {{ .Site.Title }}
+        {{- else }}
+        {{ .Title }} &middot; {{ .Site.Title }}
+        {{- end }}
+    </title>
+
+    <meta name="HandheldFriendly" content="True" />
+
+    <link rel="stylesheet" type="text/css" href="/css/bulma.css" />
+    <link rel="stylesheet" type="text/css" href="/css/global.css" />
+    <link href="https://fonts.loli.net/css?family=Lora:400,400i,600,600i" rel="stylesheet">
+    <link href="https://fonts.loli.net/css?family=Hammersmith+One" rel="stylesheet">
+
+</head>

@@ -1,0 +1,65 @@
+#site-main {
+    margin: auto;
+}
+
+.site-header {
+    margin-top: 60px;
+}
+.site-title {
+    font-size: 48px;
+}
+
+.post-card {
+    margin-top: 60px;
+}
+
+.post-card-image-link img {
+    max-width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.125);
+}
+
+.post-card-text {
+    padding-left: 40px;
+}
+.post-card-text a {
+    font-family: "Hammersmith One", sans-serif;
+    text-decoration: none;
+    color: #000;
+}
+.post-card-text h2 {
+    margin-top: 0;
+    font-size: 26px;
+}
+.post-card-tags ul {
+    margin: 0;
+    padding: 0;
+}
+.post-card-tags li {
+    padding-left: 0;
+    text-decoration: none;
+    list-style: none;
+    font-size: 20px;
+    line-height: 40px;
+}
+
+.site-wrapper {
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+    .site-wrapper {
+        width: 85%;
+    }
+}
+@media (min-width: 1024px) {
+    .site-wrapper {
+        width: 65%;
+    }
+}
+@media (min-width: 1200px) {
+    .site-wrapper {
+        width: 55%;
+    }
+}

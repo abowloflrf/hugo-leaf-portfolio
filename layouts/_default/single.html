@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode | default "en" }}">
+
+{{ partial "head.html" . }}
+
+<body>
+    {{ partial "navbar.html" . }}
+
+    <div class="site-wrapper">
+            <link rel="stylesheet" href="/css/post.css">
+            
+<!-- TODO:cover -->
+            
+            
+            <div class="inner">
+                <article class="post-full">
+                    <section class="post-full-content">
+                        <div class="post-content">
+                            <h1 class="post-title">{{ .Title}}</h1>
+                            {{ .Content }}
+                        </div>
+                    </section>
+                </article>
+            </div>
+    </div>
+
+</body>
+
+</html>
