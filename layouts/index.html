@@ -11,12 +11,12 @@
         <div class="site-header">
             <div class="site-header-content">
                 <h1 class="site-title">{{ .Site.Title }}</h1>
-                <p class="site-description">Site Description</p>
+                <p class="site-description">{{ .Site.Params.Description }}</p>
             </div>
         </div>
         <div id="site-main" class="site-main outer">
             <div class="index-posts">
-                {{ range (.Paginate .Pages).Pages }}
+                {{ range where .Site.RegularPages "Section" "==" "posts" }}
                     {{ partial "card.html" . }}
                 {{ end }}
             </div>

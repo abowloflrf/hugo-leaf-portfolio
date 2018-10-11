@@ -7,11 +7,11 @@
     {{ partial "navbar.html" . }}
 
     <div class="site-wrapper">
-            <link rel="stylesheet" href="/css/post.css">
-            
-<!-- TODO:cover -->
-            
-            
+        <link rel="stylesheet" href="/css/post.css">
+
+    {{ if .Params.feature_img }}
+        <img class="post-cover" src="/images/{{ .Params.feature_img }}">
+    {{ end }}
             <div class="inner">
                 <article class="post-full">
                     <section class="post-full-content">

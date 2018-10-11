@@ -29,12 +29,15 @@ h1.post-title {
     margin-top: 80px;
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
+.post-content h1,
 .post-content h2,
 .post-content h3,
 .post-content h4 {
     font-family: "Hammersmith One", sans-serif;
+}
+.post-content h1.post-title{
+    font-size: 4em;
 }
 .post-content h2 {
     font-size: 2em;
@@ -69,6 +72,20 @@ h1.post-title {
     text-align: center;
 }
 
+.post-content :not(pre) > code {
+    background: #ebeef0;
+    padding: 1px 5px;
+    margin: 0 4px;
+    border-radius: 3px;
+    vertical-align: middle;
+}
+
+.post-content pre {
+    line-height: 1.8;
+    background-color: #ebeef0;
+    padding: 1rem;
+    border-radius: 3px;
+}
 .project-info {
     min-width: 100%;
 }
@@ -185,13 +202,9 @@ h1.post-title {
         width: 85%;
     }
 }
-@media (min-width: 1024px) {
-    .post-full {
-        width: 65%;
-    }
-}
+
 @media (min-width: 1200px) {
     .post-full {
-        widows: 55%;
+        width: 65%;
     }
 }

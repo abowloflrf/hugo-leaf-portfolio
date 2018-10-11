@@ -1,7 +1,8 @@
 <div class="nav-wrapper">
     <ul class="nav">
-        <li class="nav-home nav-current"><a href="/">Home</a></li>
-        <li class="nav-about"><a href="/about">About</a></li>
-        <li class="nav-contact"><a href="/contact">Contact</a></li>
+        {{ $currentPage := . }}
+        {{ range .Site.Menus.navbar }}
+        <li class="nav-item {{ if or ($currentPage.IsMenuCurrent "navbar" . ) ($currentPage.HasMenuCurrent "navbar" . ) }}nav-current{{ end }}"><a href="{{ .URL }}">{{ .Name }}</a></li>
+        {{ end }}
     </ul>
 </div>
