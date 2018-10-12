@@ -7,6 +7,10 @@
     {{ partial "navbar.html" . }}
 
     <div class="site-wrapper">
+        <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+        <script src="/slick/slick.min.js"></script>
+        <link rel="stylesheet" href="/slick/slick.css">
+        <link rel="stylesheet" href="/slick/slick-theme.css">
         <link rel="stylesheet" href="/css/post.css">
 
     {{ if .Params.feature_img }}
@@ -23,6 +27,23 @@
                 </article>
             </div>
     </div>
+    <script>
+        $('.slider-for').slick({
+            arrows: false,
+            fade: true,
+            asNavFor: '.slider-nav',
+            adaptiveHeight: false
+    
+        });
+        $('.slider-nav').slick({
+            slidesToScroll: 1,
+            asNavFor: '.slider-for',
+            centerMode: true,
+            focusOnSelect: true,
+            variableWidth: true,
+            infinite: false
+        });
+    </script>
 
 </body>
 

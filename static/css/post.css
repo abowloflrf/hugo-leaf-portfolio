@@ -41,7 +41,6 @@ h1.post-title {
 }
 .post-content h2 {
     font-size: 2em;
-    text-align: center;
     margin: 40px 0;
 }
 .post-content h3 {
@@ -81,9 +80,11 @@ h1.post-title {
 }
 
 .post-content pre {
+    font-size: 16px;
     line-height: 1.8;
     background-color: #ebeef0;
     padding: 1rem;
+    margin-bottom: 1.5em;
     border-radius: 3px;
 }
 .project-info {
@@ -94,54 +95,6 @@ h1.post-title {
     padding-left: 1em;
 }
 
-.kg-image-card {
-    margin: 0 0 1.5em;
-}
-.kg-width-wide img {
-    max-width: 85vw;
-}
-
-.kg-width-full img {
-    max-width: 100vw;
-}
-.kg-gallery-card .kg-gallery-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    flex-direction: column;
-    margin: 15px auto;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-}
-
-.kg-gallery-card .kg-gallery-row {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    flex-direction: row;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-}
-
-.kg-gallery-card .kg-gallery-image img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    margin: 0;
-}
-
-.kg-gallery-card .kg-gallery-row:not(:first-of-type) {
-    margin: 15px 0 0 0;
-}
-
-.kg-gallery-card .kg-gallery-image:not(:first-of-type) {
-    margin: 0 0 0 15px;
-}
 .post-full {
     width: 90%;
     margin: 0 auto;

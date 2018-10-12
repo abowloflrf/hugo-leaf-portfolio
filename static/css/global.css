@@ -79,7 +79,7 @@ video {
     padding: 0;
     border: 0;
     font: inherit;
-    font-size: 18px;
+    font-size: 16px;
     vertical-align: baseline;
 }
 body {
@@ -168,7 +168,7 @@ code,
 kbd,
 pre,
 samp {
-    font-family: monospace, monospace;
+    font-family: "Fira Code", Consolas, "Liberation Mono", Menlo, monospace;
     font-size: 1em;
 }
 button,
@@ -261,11 +261,11 @@ body {
     overflow-x: hidden;
     color: color(var(--midgrey) l(-25%));
     font-family: Lora, serif;
-    font-size: 1.5rem;
+    /* font-size: 1.5rem; */
     line-height: 1.6em;
-    font-weight: 400;
-    font-style: normal;
-    letter-spacing: 0;
+    /* font-weight: 400; */
+    /* font-style: normal; */
+    /* letter-spacing: 0; */
     text-rendering: optimizeLegibility;
     background: #fff;
 
@@ -370,8 +370,6 @@ blockquote {
 
 blockquote p {
     margin: 0.8em 0;
-    font-size: 1.2em;
-    font-weight: 300;
 }
 
 blockquote small {
@@ -480,12 +478,12 @@ h6 {
     display: inline;
 }
 .nav-wrapper li a {
-    font-family: 'Hammersmith One', sans-serif;
+    font-family: "Hammersmith One", sans-serif;
     margin: 0 20px;
     text-decoration: none;
     text-transform: uppercase;
     color: #000;
 }
-.nav-current{
+.nav-current {
     text-decoration: underline;
 }

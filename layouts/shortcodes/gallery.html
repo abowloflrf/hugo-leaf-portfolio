@@ -1,0 +1,17 @@
+{{ $images := .Params }}
+<div class="slider-container">
+        <div class="slider slider-for">
+            {{range $images}}
+            <div>
+                <img src="/images/{{ . }}" alt="{{.}}">
+            </div>
+            {{end}}
+        </div>
+        <div class="slider slider-nav">
+            {{range $images}}
+            <div>
+                <img src="/images/{{ . }}" alt="{{.}}">
+            </div>
+            {{end}}
+        </div>
+    </div>
