@@ -2,6 +2,60 @@
     margin: auto;
 }
 
+.sidebar {
+    background-color: #abd1d9;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 480px;
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-top: 80px;
+}
+.sidebar-name {
+    text-align: center;
+}
+.sidebar-description {
+    padding-top: 40px;
+}
+.sidebar-description .em {
+    font-size: 22px;
+    font-weight: 600;
+}
+.sidebar-description p {
+    text-align: justify;
+    color: #3d778c;
+    font-size: 18px;
+    line-height: 28px;
+}
+.sidebar-btns button {
+    background-color: #3d778c;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-right: 15px;
+    transition: 0.4s;
+}
+.sidebar-btns button:focus {
+    outline: none;
+}
+.sidebar-btns button:hover {
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
+    transition: 0.4s;
+}
+.sidebar-self {
+    position: absolute;
+    bottom: 0;
+    width: 360px;
+    z-index: -999;
+}
+.content {
+    margin-left: 480px;
+    padding: 40px 80px;
+}
+
 .site-header {
     margin-top: 60px;
 }
@@ -10,25 +64,35 @@
 }
 
 .post-card {
-    margin-top: 60px;
+    margin-top: 40px;
 }
 
 .post-card-image-link img {
     max-width: 100%;
     border-radius: 12px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.125);
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.125);
+    transition: all ease-out 0.2s;
+}
+
+.post-card-image-link img:hover{
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+    transition: all ease-out 0.2s;
 }
 
 .post-card-text {
     padding-left: 40px;
 }
 .post-card-text a {
-    font-family: "Hammersmith One", sans-serif;
     text-decoration: none;
-    color: #000;
+}
+.post-card-text a h2 {
+    font-family: Bitter, serif;
+    font-weight: 700;
+    color: #DD8794;
 }
 .post-card-text h2 {
     margin-top: 0;
+    margin-bottom: 30px;
     font-size: 26px;
 }
 .post-card-tags ul {
@@ -36,11 +100,13 @@
     padding: 0;
 }
 .post-card-tags li {
+    /* font-family: Bitter, serif; */
     padding-left: 0;
     text-decoration: none;
     list-style: none;
     font-size: 20px;
     line-height: 40px;
+    color: #3D778C;
 }
 
 .site-wrapper {

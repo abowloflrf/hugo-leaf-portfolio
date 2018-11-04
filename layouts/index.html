@@ -4,24 +4,34 @@
 {{ partial "head.html" . }}
 
 <body>
-    {{ partial "navbar.html" . }}
-
-    <div class="site-wrapper">
-        <link rel="stylesheet" href="/css/index.css">
-        <div class="site-header">
-            <div class="site-header-content">
-                <h1 class="site-title">{{ .Site.Title }}</h1>
-                <p class="site-description">{{ .Site.Params.Description }}</p>
-            </div>
+    <!-- {{ partial "navbar.html" . }} -->
+    <link rel="stylesheet" href="/css/index.css">
+    <div class="sidebar">
+        <div class="sidebar-name">
+            <img src="/assets/name.png" />
         </div>
+        <div class="sidebar-description">
+            <p>I am current a <span class="em">UX</span> and <span class="em">Product</span> designer, ready for pursing a Master of Design in <span class="em">Interaction</span> and <span class="em">Service</span> Design. I have a hugo passion to combine technology with design thinking, as long as deep user research to create the easy-to-use design.</p>
+        </div>
+        <div class="sidebar-btns">
+            <button>ABOUT</button>
+            <button>RESUME</button>
+        </div>
+        <div class="sidebar-self">
+            <img src="/assets/self.png">
+        </div>
+    </div>
+    <div class="content">
+
         <div id="site-main" class="site-main outer">
             <div class="index-posts">
                 {{ range where .Site.RegularPages "Section" "==" "posts" }}
-                    {{ partial "card.html" . }}
+                {{ partial "card.html" . }}
                 {{ end }}
             </div>
         </div>
     </div>
+
 
 </body>
 
