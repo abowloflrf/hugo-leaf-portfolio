@@ -5,7 +5,9 @@
 
 <body>
     {{ partial "navbar.html" . }}
-
+    <aside class="post-toc">
+        {{ .TableOfContents }}
+    </aside>
     <div class="site-wrapper">
         <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
         <script src="/slick/slick.min.js"></script>
@@ -13,19 +15,19 @@
         <link rel="stylesheet" href="/slick/slick-theme.css">
         <link rel="stylesheet" href="/css/post.css">
 
-    {{ if .Params.feature_img }}
+        {{ if .Params.feature_img }}
         <img class="post-cover" src="/images/{{ .Params.feature_img }}">
-    {{ end }}
-            <div class="inner">
-                <article class="post-full">
-                    <section class="post-full-content">
-                        <div class="post-content">
-                            <h1 class="post-title">{{ .Title}}</h1>
-                            {{ .Content }}
-                        </div>
-                    </section>
-                </article>
-            </div>
+        {{ end }}
+        <div class="inner">
+            <article class="post-full">
+                <section class="post-full-content">
+                    <div class="post-content">
+                        <h1 class="post-title">{{ .Title}}</h1>
+                        {{ .Content }}
+                    </div>
+                </section>
+            </article>
+        </div>
     </div>
     <script>
         $('.slider-for').slick({
@@ -33,7 +35,7 @@
             fade: true,
             asNavFor: '.slider-nav',
             adaptiveHeight: false
-    
+
         });
         $('.slider-nav').slick({
             slidesToScroll: 1,

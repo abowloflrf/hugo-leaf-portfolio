@@ -1,3 +1,6 @@
+body{
+    background-color: #dce7f3;
+}
 .post-full-content blockquote,
 .post-full-content dl,
 .post-full-content h1,
@@ -17,7 +20,8 @@
 }
 .post-cover {
     width: 100%;
-    height: 100%;
+    height: 100vh;
+    overflow: hidden;
     object-fit: cover;
 }
 
@@ -36,7 +40,7 @@ h1.post-title {
 .post-content h4 {
     font-family: "Hammersmith One", sans-serif;
 }
-.post-content h1.post-title{
+.post-content h1.post-title {
     font-size: 4em;
 }
 .post-content h2 {
@@ -99,6 +103,42 @@ h1.post-title {
     width: 90%;
     margin: 0 auto;
 }
+/* side nav */
+#TableOfContents li {
+    list-style: none;
+    text-align: center;
+    padding-left: 0;
+    padding-right: 0;
+}
+#TableOfContents ul {
+    padding-left: 0;
+    padding-right: 0;
+    margin: 0;
+}
+#TableOfContents li a {
+    font-family: Bitter, serif;
+    text-decoration: none;
+    transition: all ease-in 0.2s;
+}
+#TableOfContents li a:hover{
+    transition: all ease-in 0.2s;
+    color: #000;
+}
+.post-toc {
+    position: fixed;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.4);
+    padding: 5px 20px;
+    top: 20%;
+    right: 10px;
+    z-index: 99;
+    transition: all ease 0.2s;
+}
+.post-toc:hover {
+    background-color: rgba(255, 255, 255, 0.85);
+    transition: all ease 0.2s;
+}
+/* end if side nav */
 
 /* slick */
 .slider-container {
