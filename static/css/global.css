@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Bitter:400,700|Raleway:300,300i,400,400i,700,700i");
+@import url("https://fonts.googleapis.com/css?family=Hammersmith+One|Bitter:400,700|Raleway:300,300i,400,400i,700,700i");
 html,
 body,
 div,
@@ -460,31 +460,4 @@ h6 {
 .site-wrapper {
     padding: 60px 0px;
 }
-.nav-wrapper {
-    height: 60px;
-    position: fixed;
-    z-index: 10;
-    background-color: #fff;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    box-shadow: 0 2px 4px hsla(0, 0%, 50%, 0.12);
-}
-.nav-wrapper ul {
-    padding: 0;
-    margin: 0;
-}
-.nav-wrapper li {
-    display: inline;
-}
-.nav-wrapper li a {
-    font-family: "Hammersmith One", sans-serif;
-    margin: 0 20px;
-    text-decoration: none;
-    text-transform: uppercase;
-    color: #000;
-}
-.nav-current {
-    text-decoration: underline;
-}
+

@@ -1,8 +1,21 @@
 <div class="nav-wrapper">
-    <ul class="nav">
+    <div class="nav-back-icon nav-icon">
+        <i class="material-icons">arrow_back</i>
+    </div>
+    <div class="nav-item nav-item-left">
+        <a href="/">HOME</a>
+    </div>
+    <div class="nav-item nav-item-right">
+        <a href="#">ABOUT</a>
+    </div>
+    <!-- <ul class="nav">
         {{ $currentPage := . }}
         {{ range .Site.Menus.navbar }}
-        <li class="nav-item {{ if or ($currentPage.IsMenuCurrent "navbar" . ) ($currentPage.HasMenuCurrent "navbar" . ) }}nav-current{{ end }}"><a href="{{ .URL }}">{{ .Name }}</a></li>
+        <li class="nav-item {{ if or ($currentPage.IsMenuCurrent "navbar" . ) ($currentPage.HasMenuCurrent "navbar" . ) }}nav-current{{ end }}"><a
+                href="{{ .URL }}">{{ .Name }}</a></li>
         {{ end }}
-    </ul>
+    </ul> -->
+    <div class="nav-forward-icon nav-icon">
+        <i class="material-icons">arrow_forward</i>
+    </div>
 </div>

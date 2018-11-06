@@ -1,5 +1,5 @@
-body{
-    background-color: #dce7f3;
+body {
+    background-color: #dde8f1;
 }
 .post-full-content blockquote,
 .post-full-content dl,
@@ -103,6 +103,132 @@ h1.post-title {
     width: 90%;
     margin: 0 auto;
 }
+
+/* topnav */
+.nav-wrapper {
+    height: 60px;
+    position: fixed;
+    z-index: 10;
+    background-color: #fff;
+    width: 100%;
+    align-items: center;
+    box-shadow: 0 2px 4px hsla(0, 0%, 50%, 0.12);
+}
+.nav-back-icon {
+    float: left;
+}
+.nav-forward-icon {
+    float: right;
+}
+.nav-icon {
+    height: 60px;
+    width: 60px;
+    text-align: center;
+    cursor: pointer;
+}
+.nav-icon i {
+    line-height: 60px;
+    width: 60px;
+}
+.nav-icon i::before{
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: block;
+    top: 15px;
+    background-color: transparent;
+    transition: all ease-out 0.2s 
+}
+.nav-back-icon i::before{
+    left: 15px;
+}
+.nav-forward-icon i::before{
+    right: 15px;
+}
+.nav-icon i:hover::before{
+    width: 45px;
+    height: 45px;
+    top: 7.5px;
+    background-color: rgba(0, 0, 0, 0.2);
+    transition: all ease-out 0.2s;
+}
+.nav-back-icon i:hover::before{
+    left: 7.5px;
+    transition: all ease-out 0.2s;
+}
+.nav-forward-icon i:hover::before{
+    right: 7.5px;
+    transition: all ease-out 0.2s;
+}
+.nav-item {
+    position: absolute;
+    top:15px;
+}
+.nav-item a {
+    font-family: "Hammersmith One", sans-serif;
+    text-decoration: none;
+    color: #000;
+}
+.nav-item a:before {
+    content: "";
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 2px;
+    top: 26px;
+    z-index: 7;
+    left: 0;
+    background-color: #000;
+    -webkit-transform: scaleX(0);
+    -ms-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.65s cubic-bezier(0.7, 0.3, 0, 1);
+    -o-transition: all 0.65s cubic-bezier(0.7, 0.3, 0, 1);
+    transition: all 0.65s cubic-bezier(0.7, 0.3, 0, 1);
+    -webkit-transform-origin: left;
+    -ms-transform-origin: left;
+    transform-origin: left;
+    will-change: transform;
+}
+
+.nav-item a:hover:before {
+    -webkit-transform: scaleX(1);
+    -ms-transform: scaleX(1);
+    transform: scaleX(1);
+}
+
+.nav-item a:after {
+    content: "";
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 2px;
+    z-index: 8;
+    left: 0;
+    background-color: #0f3351;
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    -ms-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.65s cubic-bezier(0.7, 0.3, 0, 1);
+    -o-transition: all 0.65s cubic-bezier(0.7, 0.3, 0, 1);
+    transition: all 0.65s cubic-bezier(0.7, 0.3, 0, 1);
+    -webkit-transform-origin: right;
+    -ms-transform-origin: right;
+    transform-origin: right;
+}
+.nav-item-left {
+    left: 60px;
+    padding-left: 30px;
+}
+.nav-item-right {
+    right: 60px;
+    padding-right: 30px;
+}
+/* end of topnav */
+
 /* side nav */
 #TableOfContents li {
     list-style: none;
@@ -120,7 +246,7 @@ h1.post-title {
     text-decoration: none;
     transition: all ease-in 0.2s;
 }
-#TableOfContents li a:hover{
+#TableOfContents li a:hover {
     transition: all ease-in 0.2s;
     color: #000;
 }
@@ -129,7 +255,7 @@ h1.post-title {
     border-radius: 4px;
     background-color: rgba(255, 255, 255, 0.4);
     padding: 5px 20px;
-    top: 20%;
+    top: 35%;
     right: 10px;
     z-index: 99;
     transition: all ease 0.2s;
