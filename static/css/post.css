@@ -162,6 +162,9 @@ h1.post-title {
     right: 7.5px;
     transition: all ease-out 0.2s;
 }
+.nav-icon a{
+    color: #000;
+}
 .nav-item {
     position: absolute;
     top:15px;

@@ -1,12 +1,12 @@
 <div class="nav-wrapper">
     <div class="nav-back-icon nav-icon">
-        <i class="material-icons">arrow_back</i>
+        <a href="/"><i class="material-icons">arrow_back</i></a>
     </div>
     <div class="nav-item nav-item-left">
-        <a href="/">HOME</a>
+        <a href="/about">YE TIAN</a>
     </div>
     <div class="nav-item nav-item-right">
-        <a href="#">ABOUT</a>
+        <a href="/resume">ABOUT</a>
     </div>
     <!-- <ul class="nav">
         {{ $currentPage := . }}
@@ -15,7 +15,10 @@
                 href="{{ .URL }}">{{ .Name }}</a></li>
         {{ end }}
     </ul> -->
-    <div class="nav-forward-icon nav-icon">
-        <i class="material-icons">arrow_forward</i>
-    </div>
+    {{ with .PrevInSection }}
+        <div class="nav-forward-icon nav-icon">
+            <a class="next" href="{{.Permalink}}"><i class="material-icons">arrow_forward</i></a>
+        </div>
+    {{ end }}
+
 </div>

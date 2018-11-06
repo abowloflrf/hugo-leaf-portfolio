@@ -29,10 +29,13 @@
     font-size: 18px;
     line-height: 28px;
 }
-.sidebar-btns button {
-    background-color: #3d778c;
+.sidebar-btns button a{
     color: #fff;
     font-weight: 600;
+    text-decoration: none;
+}
+.sidebar-btns button {
+    background-color: #3d778c;
     border-radius: 5px;
     padding: 5px 10px;
     margin-right: 15px;
