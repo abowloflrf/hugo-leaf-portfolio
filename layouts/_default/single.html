@@ -5,15 +5,29 @@
 
 <body>
     {{ partial "navbar.html" . }}
-    <aside class="post-toc">
-        {{ .TableOfContents }}
-    </aside>
+    {{ partial "toc.html" . }}
     <div class="site-wrapper">
         <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
         <script src="/slick/slick.min.js"></script>
         <link rel="stylesheet" href="/slick/slick.css">
         <link rel="stylesheet" href="/slick/slick-theme.css">
-        <link rel="stylesheet" href="/css/post.css">
+        <link rel="stylesheet" href="/css/post.css?{{ now.Unix }}">
+        {{ if and (isset .Params "color_bg") (isset .Params "color_a") (isset .Params "color_b") }}
+        <style>
+            body{
+                background-color: {{ .Params.color_bg }};
+            }
+            h2{
+                color: {{ .Params.color_a }}
+            }
+            strong{
+                color: {{ .Params.color_a }}
+            }
+            h3{
+                color: {{ .Params.color_b }}
+            }
+        </style>
+        {{ end }}
 
         {{ if .Params.feature_img }}
         <img class="post-cover" src="/images/{{ .Params.feature_img }}">
