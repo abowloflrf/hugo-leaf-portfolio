@@ -45,7 +45,6 @@ h1.post-title {
 }
 .post-content h2 {
     font-size: 2em;
-    margin: 40px 0;
 }
 .post-content h3 {
     font-size: 1.6em;
@@ -130,7 +129,7 @@ h1.post-title {
     line-height: 60px;
     width: 60px;
 }
-.nav-icon i::before{
+.nav-icon i::before {
     content: "";
     position: absolute;
     width: 30px;
@@ -139,35 +138,35 @@ h1.post-title {
     display: block;
     top: 15px;
     background-color: transparent;
-    transition: all ease-out 0.2s 
+    transition: all ease-out 0.2s;
 }
-.nav-back-icon i::before{
+.nav-back-icon i::before {
     left: 15px;
 }
-.nav-forward-icon i::before{
+.nav-forward-icon i::before {
     right: 15px;
 }
-.nav-icon i:hover::before{
+.nav-icon i:hover::before {
     width: 45px;
     height: 45px;
     top: 7.5px;
     background-color: rgba(0, 0, 0, 0.2);
     transition: all ease-out 0.2s;
 }
-.nav-back-icon i:hover::before{
+.nav-back-icon i:hover::before {
     left: 7.5px;
     transition: all ease-out 0.2s;
 }
-.nav-forward-icon i:hover::before{
+.nav-forward-icon i:hover::before {
     right: 7.5px;
     transition: all ease-out 0.2s;
 }
-.nav-icon a{
+.nav-icon a {
     color: #000;
 }
 .nav-item {
     position: absolute;
-    top:15px;
+    top: 15px;
 }
 .nav-item a {
     font-family: "Hammersmith One", sans-serif;
@@ -248,6 +247,7 @@ h1.post-title {
     font-family: Bitter, serif;
     text-decoration: none;
     transition: all ease-in 0.2s;
+    color: rgba(0, 0, 0, 0.2);
 }
 #TableOfContents li a:hover {
     transition: all ease-in 0.2s;
@@ -256,7 +256,7 @@ h1.post-title {
 .post-toc {
     position: fixed;
     border-radius: 4px;
-    background-color: rgba(255, 255, 255, 0.4);
+    background-color: rgba(255, 255, 255, 0.1);
     padding: 5px 20px;
     top: 35%;
     right: 10px;
@@ -264,8 +264,9 @@ h1.post-title {
     transition: all ease 0.2s;
 }
 .post-toc:hover {
-    background-color: rgba(255, 255, 255, 0.85);
+    background-color: rgba(255, 255, 255, 0.8);
     transition: all ease 0.2s;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
 }
 /* end if side nav */
 
