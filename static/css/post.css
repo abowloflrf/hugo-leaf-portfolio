@@ -65,6 +65,14 @@ h1.post-title {
     display: block;
     max-width: 100%;
 }
+.post-content img.transparent{
+    opacity: 0.5;
+    transition: 0.3s;
+}
+.post-content img.transparent:hover{
+    opacity: 1;
+    transition: 0.3s;
+}
 .post-content figcaption {
     font-family: "Fira Code", Consolas, "Liberation Mono", Menlo, monospace;
     margin-top: 6px;
@@ -162,18 +170,24 @@ h1.post-title {
     transition: all ease-out 0.2s;
 }
 .nav-icon a {
-    color: #000;
+    color: #3D778C;
 }
 .nav-item {
     position: absolute;
-    top: 15px;
+    top: 16px;
 }
+
 .nav-item a {
     font-family: "Hammersmith One", sans-serif;
     text-decoration: none;
-    color: #000;
+    color: #3D778C;
+    transition: 0.2s;
 }
-.nav-item a:before {
+.nav-item-left a:hover {
+    color: #DD8794;
+    transition: 0.2s;
+}
+.nav-underline a:before {
     content: "";
     position: relative;
     display: block;
@@ -182,7 +196,7 @@ h1.post-title {
     top: 26px;
     z-index: 7;
     left: 0;
-    background-color: #000;
+    background-color: #3D778C;
     -webkit-transform: scaleX(0);
     -ms-transform: scaleX(0);
     transform: scaleX(0);
@@ -195,13 +209,13 @@ h1.post-title {
     will-change: transform;
 }
 
-.nav-item a:hover:before {
+.nav-underline a:hover:before {
     -webkit-transform: scaleX(1);
     -ms-transform: scaleX(1);
     transform: scaleX(1);
 }
 
-.nav-item a:after {
+.nav-underline a:after {
     content: "";
     position: relative;
     display: block;
@@ -209,7 +223,7 @@ h1.post-title {
     height: 2px;
     z-index: 8;
     left: 0;
-    background-color: #0f3351;
+    background-color: #3D778C;
     visibility: hidden;
     -webkit-transform: scaleX(0);
     -ms-transform: scaleX(0);

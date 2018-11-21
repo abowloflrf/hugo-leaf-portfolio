@@ -44,13 +44,14 @@
     </div>
     <script>
         $('.slider-for').slick({
-            arrows: false,
+            arrows: true,
             fade: true,
             asNavFor: '.slider-nav',
-            adaptiveHeight: false
-
+            adaptiveHeight: false,
+            infinite: false
         });
         $('.slider-nav').slick({
+            arrows: false,
             slidesToScroll: 1,
             asNavFor: '.slider-for',
             centerMode: true,
