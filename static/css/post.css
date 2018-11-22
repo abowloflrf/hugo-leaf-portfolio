@@ -68,15 +68,18 @@ h1.post-title {
 }
 .post-content img.transparent {
     opacity: 0.5;
+    width: 50%;
+    margin: auto;
+    transition: 0.3s;
+}
+.post-content img.transparent:hover {
+    opacity: 1;
+    width: 100%;
     transition: 0.3s;
 }
 .post-content img.full-screen {
     min-width: 95vw;
     height: auto;
-}
-.post-content img.transparent:hover {
-    opacity: 1;
-    transition: 0.3s;
 }
 .post-content figcaption {
     font-family: "Fira Code", Consolas, "Liberation Mono", Menlo, monospace;
