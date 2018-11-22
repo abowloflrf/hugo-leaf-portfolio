@@ -71,7 +71,7 @@ h1.post-title {
     transition: 0.3s;
 }
 .post-content img.full-screen {
-    min-width: 100vw;
+    min-width: 95vw;
     height: auto;
 }
 .post-content img.transparent:hover {
