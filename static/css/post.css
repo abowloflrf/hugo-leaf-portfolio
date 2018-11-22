@@ -33,6 +33,7 @@ h1.post-title {
     margin-top: 80px;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 .post-content h1,
 .post-content h2,
@@ -65,11 +66,15 @@ h1.post-title {
     display: block;
     max-width: 100%;
 }
-.post-content img.transparent{
+.post-content img.transparent {
     opacity: 0.5;
     transition: 0.3s;
 }
-.post-content img.transparent:hover{
+.post-content img.full-screen {
+    min-width: 100vw;
+    height: auto;
+}
+.post-content img.transparent:hover {
     opacity: 1;
     transition: 0.3s;
 }
@@ -170,7 +175,7 @@ h1.post-title {
     transition: all ease-out 0.2s;
 }
 .nav-icon a {
-    color: #3D778C;
+    color: #3d778c;
 }
 .nav-item {
     position: absolute;
@@ -180,11 +185,11 @@ h1.post-title {
 .nav-item a {
     font-family: "Hammersmith One", sans-serif;
     text-decoration: none;
-    color: #3D778C;
+    color: #3d778c;
     transition: 0.2s;
 }
 .nav-item-left a:hover {
-    color: #DD8794;
+    color: #dd8794;
     transition: 0.2s;
 }
 .nav-underline a:before {
@@ -196,7 +201,7 @@ h1.post-title {
     top: 26px;
     z-index: 7;
     left: 0;
-    background-color: #3D778C;
+    background-color: #3d778c;
     -webkit-transform: scaleX(0);
     -ms-transform: scaleX(0);
     transform: scaleX(0);
@@ -223,7 +228,7 @@ h1.post-title {
     height: 2px;
     z-index: 8;
     left: 0;
-    background-color: #3D778C;
+    background-color: #3d778c;
     visibility: hidden;
     -webkit-transform: scaleX(0);
     -ms-transform: scaleX(0);
