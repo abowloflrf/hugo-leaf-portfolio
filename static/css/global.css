@@ -314,7 +314,7 @@ ul,
 ol,
 dl,
 blockquote {
-    margin: 0 0 1.5em 0;
+    margin: 0 0 1em 0;
 }
 
 ol,
@@ -446,7 +446,7 @@ h4 {
 }
 
 h5 {
-    margin: 1.5em 0 0.5em 0;
+    margin: 0.5em 0 0.5em 0;
     font-size: 1.4rem;
     font-weight: 500;
 }

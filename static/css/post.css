@@ -54,7 +54,8 @@ h1.post-title {
     font-size: 1.2em;
 }
 .post-content hr {
-    margin: 40px;
+    width: 90%;
+    margin: 30px 0;
     border: none;
     border-top: 1px solid #c9d3df;
 }
