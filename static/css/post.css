@@ -1,18 +1,18 @@
 body {
     background-color: #fff;
 }
-.post-full-content blockquote,
-.post-full-content dl,
-.post-full-content h1,
-.post-full-content h2,
-.post-full-content h3,
-.post-full-content h4,
-.post-full-content h5,
-.post-full-content h6,
-.post-full-content ol,
-.post-full-content p,
-.post-full-content pre,
-.post-full-content ul {
+.post-content blockquote,
+.post-content dl,
+.post-content h1,
+.post-content h2,
+.post-content h3,
+.post-content h4,
+.post-content h5,
+.post-content h6,
+.post-content ol,
+.post-content p,
+.post-content pre,
+.post-content ul {
     min-width: 100%;
 }
 .inner {
@@ -55,7 +55,7 @@ h1.post-title {
 }
 .post-content hr {
     width: 90%;
-    margin: 30px 0;
+    margin: 30px auto;
     border: none;
     border-top: 1px solid #c9d3df;
 }
