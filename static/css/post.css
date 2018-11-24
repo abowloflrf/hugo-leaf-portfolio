@@ -185,18 +185,24 @@ h1.post-title {
     position: absolute;
     top: 16px;
 }
-
+.nav-item li {
+    display: inline;
+}
 .nav-item a {
     font-family: "Hammersmith One", sans-serif;
     text-decoration: none;
     color: #3d778c;
     transition: 0.2s;
 }
-.nav-item-left a:hover {
+.nav-left {
+    left: 40px;
+    padding-left: 30px;
+}
+.nav-left a:hover {
     color: #dd8794;
     transition: 0.2s;
 }
-.nav-underline a:before {
+.nav-right a:before {
     content: "";
     position: relative;
     display: block;
@@ -218,13 +224,13 @@ h1.post-title {
     will-change: transform;
 }
 
-.nav-underline a:hover:before {
+.nav-right a:hover:before {
     -webkit-transform: scaleX(1);
     -ms-transform: scaleX(1);
     transform: scaleX(1);
 }
 
-.nav-underline a:after {
+.nav-right a:after {
     content: "";
     position: relative;
     display: block;
@@ -243,14 +249,6 @@ h1.post-title {
     -webkit-transform-origin: right;
     -ms-transform-origin: right;
     transform-origin: right;
-}
-.nav-item-left {
-    left: 60px;
-    padding-left: 30px;
-}
-.nav-item-right {
-    right: 60px;
-    padding-right: 30px;
 }
 /* end of topnav */
 

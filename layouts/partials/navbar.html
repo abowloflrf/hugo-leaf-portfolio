@@ -1,24 +1,31 @@
 <div class="nav-wrapper">
-    <div class="nav-back-icon nav-icon">
-        <a href="/"><i class="material-icons">arrow_back</i></a>
-    </div>
-    <div class="nav-item nav-item-left">
-        <a href="/about">YE TIAN</a>
-    </div>
-    <div class="nav-item nav-item-right nav-underline">
-        <a href="/resume">ABOUT</a>
-    </div>
-    <!-- <ul class="nav">
-        {{ $currentPage := . }}
-        {{ range .Site.Menus.navbar }}
-        <li class="nav-item {{ if or ($currentPage.IsMenuCurrent "navbar" . ) ($currentPage.HasMenuCurrent "navbar" . ) }}nav-current{{ end }}"><a
-                href="{{ .URL }}">{{ .Name }}</a></li>
-        {{ end }}
-    </ul> -->
-    {{ with .PrevInSection }}
-        <div class="nav-forward-icon nav-icon">
-            <a class="next" href="{{.Permalink}}"><i class="material-icons">arrow_forward</i></a>
+
+    {{ if .NextInSection }}
+        {{ with .NextInSection }}
+        <div class="nav-back-icon nav-icon">
+            <a href="{{.Permalink}}"><i class="material-icons">arrow_back</i></a>
         </div>
+        {{ end }}
+    {{ else }}
+        <div class="nav-back-icon nav-icon">
+            <a href="/"><i class="material-icons">arrow_back</i></a>
+        </div>
+    {{ end }}
+    
+    <div class="nav-item nav-left">
+        <a href="/">YE TIAN</a>
+    </div>
+    <div class="nav-item nav-right" style="right:140px">
+        <a href="/about">ABOUT</a>
+    </div>
+    <div class="nav-item nav-right" style="right:60px">
+        <a href="/files/resume.pdf" target="_blank">RESUME</a>
+    </div>
+
+    {{ with .PrevInSection }}
+    <div class="nav-forward-icon nav-icon">
+        <a href="{{.Permalink}}"><i class="material-icons">arrow_forward</i></a>
+    </div>
     {{ end }}
 
 </div>
