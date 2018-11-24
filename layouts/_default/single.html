@@ -5,7 +5,10 @@
 
 <body>
     {{ partial "navbar.html" . }}
+
+    {{ if not (eq $.Params.toc false) }}
     {{ partial "toc.html" . }}
+    {{ end }}
     <div class="site-wrapper">
         <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
         <script src="/slick/slick.min.js"></script>
