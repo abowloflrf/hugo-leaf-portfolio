@@ -31,9 +31,9 @@ h1.post-title {
 
 .post-content {
     margin-top: 80px;
-    display: flex;
+    /* display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center; */
 }
 .post-content h1,
 .post-content h2,
@@ -78,9 +78,22 @@ h1.post-title {
     width: 100%;
     transition: 0.3s;
 }
-.post-content img.full-screen {
-    min-width: 95vw;
-    height: auto;
+.post-content .horizontal-scroll {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    height: 500px;
+}
+.post-content .horizontal-scroll img {
+    height: 100%;
+    max-width: unset;
+}
+.post-content .full-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.post-content .full-screen img {
+    min-width: 100vw;
 }
 .post-content figcaption {
     font-family: "Fira Code", Consolas, "Liberation Mono", Menlo, monospace;
@@ -294,9 +307,10 @@ h1.post-title {
 /* slick */
 .slider-container {
     max-width: 100%;
+    margin: 40px 0;
 }
 .slider {
-    margin-bottom: 10px;
+    margin-bottom: 0px;
 }
 .slick-prev:before,
 .slick-next:before {
@@ -305,7 +319,7 @@ h1.post-title {
 
 .slider-for .slick-slide {
     padding: 5px;
-    height: 450px;
+    height: 600px;
 }
 
 .slider-for .slick-slide img {
@@ -345,7 +359,7 @@ h1.post-title {
     margin-right: auto;
 }
 .social-links a {
-    color: #AAD0D8;
+    color: #aad0d8;
     margin: 0 15px;
     transition: 0.2s;
 }

@@ -1,17 +1,23 @@
 {{ $images := .Params }}
 <div class="slider-container">
     <div class="slider slider-for">
-        {{range $images}}
-        <div>
-            <img src="{{ . }}" alt="{{.}}">
-        </div>
-        {{end}}
+        {{ range $index, $img := $images }}
+            {{ if ( modBool $index 2 ) }}
+            <figure style="margin-bottom: 30px;">
+            <img src="{{ $img }}" alt="{{ $img }}">
+            {{ else }}
+            <figcaption>{{ $img }}</figcaption>
+            </figure>
+            {{ end }}
+        {{ end }}
     </div>
     <div class="slider slider-nav">
-        {{range $images}}
+        {{ range $index, $img := $images }}
+        {{ if ( modBool $index 2 ) }}
         <div>
-            <img src="{{ . }}" alt="{{.}}">
+            <img src="{{ $img }}" alt="{{ $img }}">
         </div>
-        {{end}}
+        {{ end }}
+        {{ end }}
     </div>
 </div>
