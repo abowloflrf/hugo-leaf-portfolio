@@ -1,23 +1,65 @@
-{{ $images := .Params }}
-<div class="slider-container">
-    <div class="slider slider-for">
-        {{ range $index, $img := $images }}
-            {{ if ( modBool $index 2 ) }}
-            <figure style="margin-bottom: 30px;">
-            <img src="{{ $img }}" alt="{{ $img }}">
-            {{ else }}
-            <figcaption>{{ $img }}</figcaption>
-            </figure>
-            {{ end }}
-        {{ end }}
+{{ $allParams := .Params }}
+{{ $glideId := (printf "%s%s" "myglide_" (index $allParams 0)) }}
+<div class="glide" id="{{ $glideId }}">
+    <div class="main-container" data-glide-el="controls">
+        <button class="glide__arrow glide__arrow--prev" data-glide-dir="<">
+            <i class="fas fa-arrow-circle-left fa-lg"></i>
+        </button>
+
+        <figure>
+            <img class="glide-main-img" src="{{ index $allParams 1 }}" alt="" srcset="" />
+            <figcaption class="glide-main-caption">{{ index $allParams 2 | safeHTML }}</figcaption>
+        </figure>
+
+        <button class="glide__arrow glide__arrow--next" data-glide-dir=">">
+            <i class="fas fa-arrow-circle-right fa-lg"></i>
+        </button>
     </div>
-    <div class="slider slider-nav">
-        {{ range $index, $img := $images }}
-        {{ if ( modBool $index 2 ) }}
-        <div>
-            <img src="{{ $img }}" alt="{{ $img }}">
-        </div>
-        {{ end }}
-        {{ end }}
+    <div class="glide__track" data-glide-el="track">
+        <ul class="glide__slides">
+            {{ $i:=0 }}
+            {{ range $imgIndex, $img := after 1 $allParams }}
+                {{ if ( modBool $imgIndex 2 ) }}
+                <li class="glide__slide"><img data-index="{{ $i }}" src="{{ $img }}" />
+                {{ $i = add $i 1 }}
+                {{ else }}
+                <div class="hide-caption" style="display: none;">{{ $img | safeHTML }}</div></li>
+                {{ end }}
+            {{ end }}
+        </ul>
     </div>
 </div>
+<script>
+    var {{ $glideId | safeJS }} = new Glide("#{{ $glideId | safeJS }}", {
+        type: "slideshow",
+        dragDistance: false,
+        touchDistance: false,
+        keyboard: false,
+        animationDuration: 0,
+        paddings: "20px",
+        startAt: 0,
+        perView: 6,
+        focusAt: "center"
+    }).mount()
+
+    document.querySelector("#{{ $glideId | safeJS }} .glide__slides").addEventListener("click", function(e) {
+        var ind = parseInt(e.target.getAttribute("data-index"))
+        if (ind === 0 || ind > 0) {
+            {{ $glideId | safeJS }}.go("=" + ind)
+        }
+    })
+    {{ $glideId | safeJS }}.on("run.after", event => {
+        currentIndex = {{ $glideId | safeJS }}.index
+        imgList = document.querySelectorAll("#{{ $glideId | safeJS }} .glide__slide img")
+        imgList.forEach(element => {
+            if (element.getAttribute("data-index") == currentIndex) {
+                var mainImg = document.querySelector("#{{ $glideId | safeJS }} .glide-main-img")
+                mainImg.src = element.src
+
+                var captionHTML = element.parentElement.lastElementChild.innerHTML
+                mainImg.parentElement.lastElementChild.innerHTML = captionHTML
+                return
+            }
+        })
+    })
+</script>

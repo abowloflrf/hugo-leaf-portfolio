@@ -10,10 +10,8 @@
     {{ partial "toc.html" . }}
     {{ end }}
     <div class="site-wrapper">
-        <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
-        <script src="/slick/slick.min.js"></script>
-        <link rel="stylesheet" href="/slick/slick.css">
-        <link rel="stylesheet" href="/slick/slick-theme.css">
+        <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide@3.2.4/dist/glide.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide@3.2.4/dist/css/glide.core.css">
         <link rel="stylesheet" href="/css/post.css?{{ now.Unix }}">
         {{ if and (isset .Params "color_bg") (isset .Params "color_a") (isset .Params "color_b") }}
         <style>
@@ -43,24 +41,6 @@
             </article>
         </div>
     </div>
-    <script>
-        $('.slider-for').slick({
-            arrows: true,
-            fade: true,
-            asNavFor: '.slider-nav',
-            adaptiveHeight: false,
-            infinite: false
-        });
-        $('.slider-nav').slick({
-            arrows: false,
-            slidesToScroll: 1,
-            asNavFor: '.slider-for',
-            centerMode: true,
-            focusOnSelect: true,
-            variableWidth: true,
-            infinite: false
-        });
-    </script>
 
 </body>
 

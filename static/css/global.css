@@ -343,11 +343,6 @@ ol {
     list-style: decimal;
 }
 
-ul,
-ol {
-    max-width: 100%;
-}
-
 li {
     margin: 0.5em 0;
     padding-left: 0.3em;
