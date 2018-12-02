@@ -98,9 +98,8 @@ h1.post-title {
 .post-content figcaption {
     font-family: "Fira Code", Consolas, "Liberation Mono", Menlo, monospace;
     margin-top: 6px;
-    color: #738a94;
+    color: #666;
     font-size: 0.86em;
-    font-style: italic;
     text-align: center;
 }
 
@@ -331,12 +330,12 @@ li.glide__slide--active {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 .glide__arrow {
-    color: #738a94;
+    color: #888;
     position: absolute;
     top: 40%;
     display: block;
-    width: 20px;
-    height: 20px;
+    width: 25px;
+    height: 25px;
     padding: 0;
     cursor: pointer;
     border: none;
@@ -345,7 +344,7 @@ li.glide__slide--active {
     transition: 0.2s;
 }
 .glide__arrow:hover {
-    color: #495057;
+    color: #444;
     transition: 0.2s;
 }
 
