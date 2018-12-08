@@ -83,9 +83,34 @@ h1.post-title {
     overflow-y: hidden;
     height: 500px;
 }
+.post-content .horizontal-scroll-wrap {
+    position: relative;
+}
 .post-content .horizontal-scroll img {
     height: 100%;
     max-width: unset;
+}
+.horizontal-scroll-btn {
+    position: absolute;
+    cursor: pointer;
+    text-align: center;
+    padding-top: 30px;
+    color: rgba(255, 255, 255, 0.8);
+    top: 40%;
+    height: 100px;
+    width: 50px;
+    background-color: rgba(0, 0, 0, 0.1);
+    transition: 0.2s;
+}
+.horizontal-scroll-btn:hover{
+    background-color: rgba(0, 0, 0, 0.25);
+    transition: 0.2s;
+}
+.horizontal-scroll-toright {
+    left: 0;
+}
+.horizontal-scroll-toleft {
+    right: 0;
 }
 .post-content .full-screen {
     display: flex;
