@@ -41,6 +41,7 @@
             </article>
         </div>
     </div>
+    <div id="to-top"><i class="fas fa-angle-double-up fa-2x"></i></div>
     <div class="lightbox-wrap">
         <div class="lightbox-close"><i class="fas fa-times fa-2x"></i></div>
         <div class="lightbox-container">
@@ -48,43 +49,7 @@
             <p class="lightbox-caption"></p>
         </div>
     </div>
-    <script>
-        var scrollBtns = document.querySelectorAll('.horizontal-scroll-btn')
-        scrollBtns.forEach(btn => {
-            btn.addEventListener('click', (e) => {
-                var scrollBase = 200
-                var bigImgDiv
-                var direction = -1
-                if (e.target.className.indexOf('fa-angle-right') >= 0 || e.target.className.indexOf('toleft') >= 0)
-                    direction = 1
-                if (e.target.nodeName === 'I')
-                    bigImgDiv = e.target.parentElement.parentElement.firstElementChild
-                else if (e.target.nodeName === 'DIV')
-                    bigImgDiv = e.target.parentElement.firstElementChild
-                bigImgDiv.scrollBy({
-                    left: direction * scrollBase,
-                    behavior: 'smooth'
-                })
-            })
-        });
-        var lightboxImgs = document.querySelectorAll('img.lightbox')
-        lightboxImgs.forEach(img => {
-            img.addEventListener('click', (e) => {
-                var lightboxWrap = document.querySelector('.lightbox-wrap')
-                var lightboxImg = document.querySelector('.lightbox-img')
-                var lightboxCaption = document.querySelector('.lightbox-caption')
-                lightboxImg.src=e.target.src
-                lightboxCaption.textContent = e.target.dataset.caption
-                lightboxWrap.style.display = 'block'
-            })
-        })
-        var lightboxCloseBtn = document.querySelector('.lightbox-close')
-        lightboxCloseBtn.addEventListener('click',(e)=>{
-            var lightboxWrap = document.querySelector('.lightbox-wrap')
-            lightboxWrap.style.display = 'none'
-        })
-    </script>
-
+    <script src="/js/app.js?{{ now.Unix }}"></script>
 </body>
 
 </html>

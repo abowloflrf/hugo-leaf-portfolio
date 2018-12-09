@@ -424,7 +424,6 @@ li.glide__slide--active {
     top: 0;
     right: 0;
 }
-
 .social-links {
     display: flex;
     justify-content: center;
@@ -441,6 +440,30 @@ li.glide__slide--active {
 .social-links a:hover {
     color: #3d778c;
     transition: 0.2s;
+}
+
+#to-top{
+    position: fixed;
+    cursor: pointer;
+    text-align: center;
+    color: #eee;
+    bottom: 40px;
+    right: 60px;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    border-radius: 50%;
+    transition: 0.3s ease;
+}
+#to-top:hover{
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+#to-top i {
+    line-height: 50px;
+    width: 50px;
+    height: 50px;
 }
 
 @media (max-width: 768px) {
