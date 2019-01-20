@@ -35,15 +35,11 @@ h1.post-title {
     align-items: center; */
 }
 .post-content h1,
-.post-content h2 {
-    font-family: futura-pt, sans-serif;
-    font-weight: 500;
-    font-style: normal;
-}
+.post-content h2,
 .post-content h3,
 .post-content h4 {
     font-family: futura-pt, sans-serif;
-    font-weight: 400;
+    font-weight: 500;
     font-style: normal;
 }
 .post-content h1.post-title {
