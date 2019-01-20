@@ -38,7 +38,9 @@ h1.post-title {
 .post-content h2,
 .post-content h3,
 .post-content h4 {
-    font-family: "Hammersmith One", sans-serif;
+    font-family: futura-pt, sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 .post-content h1.post-title {
     font-size: 4em;
@@ -302,7 +304,9 @@ h1.post-title {
     margin: 0;
 }
 #TableOfContents li a {
-    font-family: Bitter, serif;
+    font-family: futura-pt, sans-serif;
+    font-weight: 400;
+    font-style: normal;
     text-decoration: none;
     transition: all ease-in 0.2s;
     color: rgba(0, 0, 0, 0.2);

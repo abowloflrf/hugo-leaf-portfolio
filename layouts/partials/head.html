@@ -8,7 +8,6 @@
     {{- else if .Description }}
     <meta name="description" content="{{ .Description }}">
     {{- end }}
-
     <title>
         {{- if eq .URL "/" }}
         {{ .Site.Title }}
@@ -18,7 +17,7 @@
     </title>
 
     <meta name="HandheldFriendly" content="True" />
-
+    <link rel="shortcut icon" href="/favicon.png" type="image/png" />
     <link rel="stylesheet" type="text/css" href="/css/bulma.css" />
     <link rel="stylesheet" type="text/css" href="/css/global.css?{{ now.Unix }}" />
     <link href="https://fonts.loli.net/css?family=Lora:400,400i,600,600i" rel="stylesheet">
