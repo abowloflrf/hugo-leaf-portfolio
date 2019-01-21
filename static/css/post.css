@@ -446,6 +446,24 @@ li.glide__slide--active {
     transition: 0.2s;
 }
 
+.contrast-btn {
+    display: block;
+    margin: 10px auto;
+    padding: 15px 30px;
+    border: 2px solid #000;
+    color: #000;
+    border-radius: 4px;
+    font-family: "Hammersmith One", sans-serif;
+    font-size: 24px;
+    transition: 0.1s;
+}
+
+.contrast-btn:hover {
+    background-color: #000;
+    color: #fff;
+    transition: 0.1s;
+}
+
 #to-top {
     position: fixed;
     cursor: pointer;
