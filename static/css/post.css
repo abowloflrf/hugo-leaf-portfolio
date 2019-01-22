@@ -452,11 +452,13 @@ li.glide__slide--active {
     padding: 15px 30px;
     border: 2px solid #000;
     color: #000;
+    background-color: #fff;
     border-radius: 4px;
     font-family: "Hammersmith One", sans-serif;
     font-size: 24px;
     transition: 0.1s;
 }
+
 .contrast-btn a{
     text-decoration: none;
     color: inherit;
