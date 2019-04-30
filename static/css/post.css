@@ -119,6 +119,9 @@ h1.post-title {
     flex-direction: column;
     align-items: center;
 }
+.post-content .full-screen > div{
+    min-width: 100vw;
+}
 .post-content .full-screen img {
     min-width: 100vw;
 }
