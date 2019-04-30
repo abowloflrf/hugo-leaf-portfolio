@@ -122,6 +122,9 @@ h1.post-title {
 .post-content .full-screen > div{
     min-width: 100vw;
 }
+.post-content .full-screen > div > div.full-screen-container{
+    margin: auto;
+}
 .post-content .full-screen img {
     min-width: 100vw;
 }
@@ -539,10 +542,16 @@ li.glide__slide--active {
     .post-full {
         width: 85%;
     }
+    .post-content .full-screen > div > div.full-screen-container{
+        width: 85%;
+    }
 }
 
 @media (min-width: 1200px) {
     .post-full {
+        width: 65%;
+    }
+    .post-content .full-screen > div > div.full-screen-container{
         width: 65%;
     }
 }
