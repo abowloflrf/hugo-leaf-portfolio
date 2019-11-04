@@ -8,7 +8,7 @@
     <script src="/js/app.js"></script>
     <div class="sidebar">
         <div class="sidebar-name">
-            <img src="/assets/name.png" />
+            <img src="{{ .Site.Params.name_png }}" />
         </div>
         <div class="sidebar-introduction">
            <p>{{ .Site.Params.introduction | markdownify }}</p>
@@ -18,7 +18,7 @@
             <button><a href="/files/resume.pdf" target="_blank">RESUME</a></button>
         </div>
         <div class="sidebar-self">
-            <img src="/assets/self.png">
+            <img src="{{ .Site.Params.self }}">
         </div>
     </div>
     <div class="content">
