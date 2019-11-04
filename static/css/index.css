@@ -18,10 +18,11 @@
 }
 .sidebar-introduction {
     padding-top: 40px;
+    font-weight: 400;
 }
 .sidebar-introduction strong {
     font-size: 22px;
-    font-weight: 600;
+    font-weight: 500;
 }
 .sidebar-introduction p {
     text-align: justify;
@@ -31,7 +32,7 @@
 }
 .sidebar-btns button a {
     color: #fff;
-    font-weight: 600;
+    font-weight: 500;
     text-decoration: none;
 }
 .sidebar-btns button {
@@ -75,7 +76,7 @@
     border: 2px solid #3d778c;
     border-radius: 20px;
     color: #3d778c;
-    font-weight: bold;
+    font-weight: 400;
     padding: 6px;
     text-align: center;
     margin-right: 10px;
@@ -108,7 +109,7 @@
     font-weight: 400;
 }
 .post-card-image-text p {
-    font-size: 22px;
+    font-size: 18px;
 }
 .post-card-image-text hr {
     margin: 0.5em;
@@ -120,7 +121,7 @@
     overflow: hidden;
     width: 100%;
     display: block;
-    background-color: #000;
+    background-color: #3d778c;
     border-radius: 12px;
 }
 .post-card-image-link img {
