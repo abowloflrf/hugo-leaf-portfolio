@@ -23,12 +23,8 @@
     </div>
     <div class="content">
         <div class="site-tabs">
-            {{ range $index, $tag := .Site.Params.Tags }}
-                {{ if (eq $index 0) }}
-                    <div class="site-tab site-tab-selected">{{ $tag }}</div>
-                {{ else }}
-                    <div class="site-tab">{{ $tag }}</div>
-                {{ end }}
+            {{ range .Site.Params.Tags }}
+                <div class="site-tab">{{ . }}</div>
             {{ end }}
         </div>
         <div id="site-main" class="site-main outer">

@@ -26,8 +26,6 @@ function filterCard() {
 }
 
 $(function () {
-    filterCard()
-
     // 点击横向滚动实现
     var scrollBtns = document.querySelectorAll(".horizontal-scroll-btn")
     scrollBtns.forEach(btn => {
