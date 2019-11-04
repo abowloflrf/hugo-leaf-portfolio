@@ -4,14 +4,14 @@
 {{ partial "head.html" . }}
 
 <body>
-    <!-- {{ partial "navbar.html" . }} -->
     <link rel="stylesheet" href="/css/index.css?{{ now.Unix }}">
+    <script src="/js/app.js"></script>
     <div class="sidebar">
         <div class="sidebar-name">
             <img src="/assets/name.png" />
         </div>
-        <div class="sidebar-description">
-            <p>I am a <span class="em">UX</span> and <span class="em">Product</span> designer with a passion for social impact – seeking innovation in complex social systems, combining technology with design thinking as long as in-depth user research to create the user friendly design. I am currently pursuing a M.S degree in <span class="em">Information Experience Design</span> at <span class="em">Pratt</span> Information School.</p>
+        <div class="sidebar-introduction">
+           <p>{{ .Site.Params.introduction | markdownify }}</p>
         </div>
         <div class="sidebar-btns">
             <button><a href="/about">ABOUT</a></button>
@@ -22,17 +22,23 @@
         </div>
     </div>
     <div class="content">
-
+        <div class="site-tabs">
+            {{ range $index, $tag := .Site.Params.Tags }}
+                {{ if (eq $index 0) }}
+                    <div class="site-tab site-tab-selected">{{ $tag }}</div>
+                {{ else }}
+                    <div class="site-tab">{{ $tag }}</div>
+                {{ end }}
+            {{ end }}
+        </div>
         <div id="site-main" class="site-main outer">
-            <div class="index-posts">
+            <div class="index-posts columns is-multiline">
                 {{ range where .Site.RegularPages "Section" "==" "posts" }}
                 {{ partial "card.html" . }}
                 {{ end }}
             </div>
         </div>
     </div>
-
-
 </body>
 
 </html>

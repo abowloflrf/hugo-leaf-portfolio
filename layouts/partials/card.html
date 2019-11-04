@@ -1,20 +1,18 @@
-<article class="post-card columns is-gapless">
-    <div class="column post-card-image-wrap">
-        <a class="post-card-image-link" href="{{ .URL }}">
-            <img src="/images/{{ .Params.cover_img }}">
-            {{ if .Params.cover_text }}
-            <div class="post-card-image-text">{{ .Params.cover_text }}</div>
+<article class="column is-half post-card">
+    <a class="post-card-image-link" href="{{ .URL }}">
+        <img src="/images/{{ .Params.cover_img }}" />
+        <!-- <div class="post-card-image-title"></div> -->
+        <div class="post-card-image-text">
+            <div class="post-card-image-title">{{ .Title }}</div>
+            <hr>
+            <p>{{ .Params.description }}</p>
+        </div>
+    </a>
+    <section class="post-card-tags" style="display: none">
+        <ul>
+            {{ range .Params.keywords }}
+                <li>{{ . }}</li>
             {{ end }}
-        </a>
-    </div>
-    <div class="column post-card-text">
-        <a href="{{ .URL }}"><h2 class="post-card-title">{{ .Title }}</h2></a>
-        <section class="post-card-tags">
-            <ul>
-                {{ range .Params.keywords }}
-                    <li>{{ . }}</li>
-                {{ end }}
-            </ul>
-        </section>
-    </div>
+        </ul>
+    </section>
 </article>

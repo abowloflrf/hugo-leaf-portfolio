@@ -16,14 +16,14 @@
 .sidebar-name {
     text-align: center;
 }
-.sidebar-description {
+.sidebar-introduction {
     padding-top: 40px;
 }
-.sidebar-description .em {
+.sidebar-introduction strong {
     font-size: 22px;
     font-weight: 600;
 }
-.sidebar-description p {
+.sidebar-introduction p {
     text-align: justify;
     color: #3d778c;
     font-size: 18px;
@@ -65,41 +65,59 @@
 .site-title {
     font-size: 48px;
 }
-.post-card {
-    margin-bottom: 50px !important;
+.site-tabs {
+    margin-bottom: 20px;
 }
-.post-card-text {
-    margin-left: 30px !important;
+.site-tab {
+    display: inline-block;
+    height: 40px;
+    width: 120px;
+    border: 2px solid #3d778c;
+    border-radius: 20px;
+    color: #3d778c;
+    font-weight: bold;
+    padding: 6px;
+    text-align: center;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
 }
-.post-card-image-wrap {
-    min-width: 200px;
+
+.site-tab-selected {
+    background: #3d778c;
+    color: #fff;
+    transition: all ease 0.2s;
 }
-.post-card-image-wrap img {
-    transition: 0.5s ease;
-}
-.post-card-image-link:hover img {
-    opacity: 0.5;
-}
-.post-card-image-link:hover .post-card-image-text {
-    opacity: 1;
-}
+
 .post-card-image-text {
     position: absolute;
-    display: flex;
     align-items: center;
     padding: 10px;
-    top: 0;
+    top: 50%;
+    margin: auto;
     width: 100%;
-    height: 100%;
     text-align: center;
     text-shadow: 1px 0 8px rgba(0, 0, 0, 0.7);
     color: white;
-    font-size: 22px;
     opacity: 0;
     transition: 0.5s ease;
+    transform: translateY(-50%);
+}
+.post-card-image-title {
+    font-size: 26px;
+    font-weight: 400;
+}
+.post-card-image-text p {
+    font-size: 22px;
+}
+.post-card-image-text hr {
+    margin: 0.5em;
+    color: #fff;
+    border-top: 1px solid #fff;
 }
 .post-card-image-link {
     position: relative;
+    overflow: hidden;
     width: 100%;
     display: block;
     background-color: #000;
@@ -117,33 +135,13 @@
     transition: 0.5s ease;
 }
 
-.post-card-text {
-    padding-left: 40px;
+.post-card-image-link:hover img {
+    transform: scale(1.2);
+    opacity: 0.5;
 }
-.post-card-text a {
-    text-decoration: none;
-}
-.post-card-text a h2 {
-    font-family: Bitter, serif;
-    font-weight: 700;
-    color: #dd8794;
-}
-.post-card-text h2 {
-    margin-top: 0;
-    margin-bottom: 30px;
-    font-size: 26px;
-}
-.post-card-tags ul {
-    margin: 0;
-    padding: 0;
-}
-.post-card-tags li {
-    padding-left: 0;
-    text-decoration: none;
-    list-style: none;
-    font-size: 20px;
-    line-height: 40px;
-    color: #3d778c;
+
+.post-card-image-link:hover .post-card-image-text {
+    opacity: 1;
 }
 
 .site-wrapper {

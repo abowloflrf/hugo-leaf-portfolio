@@ -1,12 +1,16 @@
-name = "Leaf Portfolio"
+name = "Hugo Theme for Leaf Portfolio"
 license = "WTFPL"
 licenselink = "https://github.com/abowloflrf/hugo-leaf-portfolio/blob/master/LICENSE"
 description = ""
 homepage = "https://yetian.design/"
-tags = []
 features = []
 min_version = "0.41"
 
+[params]
+    description = "Hugo site description"
+    introduction = "Here are some **introductions**"
+    tags = ["UI/UX Design","Product Design","Coding"]
+
 [author]
-  name = "ruofeng"
+  name = "Ruofeng Lei"
   homepage = "https://ruofeng.me"
