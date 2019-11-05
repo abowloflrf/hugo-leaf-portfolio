@@ -121,24 +121,17 @@
     overflow: hidden;
     width: 100%;
     display: block;
-    background-color: #000;
     border-radius: 12px;
+    -webkit-mask-image: -webkit-radial-gradient(white, black);
 }
 .post-card-image-link img {
     max-width: 100%;
-    border-radius: 12px;
-    box-shadow: 0 0 12px rgba(0, 0, 0, 0.125);
     transition: all ease-out 0.2s;
-}
-
-.post-card-image-link img:hover {
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
-    transition: 0.5s ease;
 }
 
 .post-card-image-link:hover img {
     transform: scale(1.2);
-    opacity: 0.5;
+    filter: brightness(50%);
 }
 
 .post-card-image-link:hover .post-card-image-text {
