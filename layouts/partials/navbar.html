@@ -1,6 +1,8 @@
 <div class="nav-wrapper">
 
-    {{ if .NextInSection }}
+    {{ if hasPrefix .URL "/about" }}
+    
+    {{ else if .NextInSection }}
         {{ with .NextInSection }}
         <div class="nav-back-icon nav-icon">
             <a href="{{.Permalink}}"><i class="material-icons">arrow_back</i></a>
