@@ -72,12 +72,11 @@
 .site-tab {
     display: inline-block;
     height: 40px;
-    width: 120px;
     border: 2px solid #3d778c;
     border-radius: 20px;
     color: #3d778c;
     font-weight: 400;
-    padding: 6px;
+    padding: 6px 20px;
     text-align: center;
     margin-right: 10px;
     margin-bottom: 10px;
@@ -122,8 +121,10 @@
     width: 100%;
     display: block;
     border-radius: 12px;
+    mask-image: -webkit-radial-gradient(white, black);
     -webkit-mask-image: -webkit-radial-gradient(white, black);
 }
+
 .post-card-image-link img {
     max-width: 100%;
     transition: all ease-out 0.2s;
