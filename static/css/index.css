@@ -68,6 +68,7 @@
 }
 .site-tabs {
     margin-bottom: 20px;
+    user-select: none;
 }
 .site-tab {
     display: inline-block;
@@ -88,7 +89,9 @@
     color: #fff;
     transition: all ease 0.2s;
 }
-
+.post-card {
+    animation-duration: 0.4s;
+}
 .post-card-image-text {
     position: absolute;
     align-items: center;
