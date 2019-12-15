@@ -7,9 +7,9 @@ features = []
 min_version = "0.41"
 
 [params]
-    description = "Hugo site description"
-    introduction = "Here are some **introductions**"
-    tags = ["UI/UX Design","Product Design","Coding"]
+  description = "Hugo site description"
+  introduction = "Here are some **introductions**"
+  tags = ["UI/UX Design","Product Design","Coding"]
 
 [author]
   name = "Ruofeng Lei"

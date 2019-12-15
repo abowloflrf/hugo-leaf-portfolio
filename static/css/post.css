@@ -530,6 +530,20 @@ li.glide__slide--active {
     height: 50px;
 }
 
+
+.markpen {
+    position: relative;
+    background-image: linear-gradient(to bottom, transparent 60%, rgba(255, 95, 92, 0.5) 60%);
+    background-size: 200% 100%;
+    background-repeat: repeat-y;
+    background-position: 300% 100%;
+    transition: background-position 0.8s ease-out;
+}
+.markpen.markpen-show {
+    background-position: 100% 100%;
+}
+
+
 @media (max-width: 768px) {
     .slider-for .slick-slide {
         height: 240px;
