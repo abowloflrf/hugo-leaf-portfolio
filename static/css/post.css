@@ -537,10 +537,15 @@ li.glide__slide--active {
     background-size: 200% 100%;
     background-repeat: repeat-y;
     background-position: 300% 100%;
-    transition: background-position 0.8s ease-out;
+    font-weight: bold;
+    transition: all 1s ease-out;
 }
 .markpen.markpen-show {
     background-position: 100% 100%;
+}
+
+img.show-animation{
+    animation-duration: 2s;
 }
 
 /* Start of Zoom.js CSS file */
