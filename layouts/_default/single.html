@@ -14,22 +14,23 @@
     {{ partial "toc.html" . }}
     {{ end }}
     <div class="site-wrapper">
-        {{ if and (isset .Params "color_bg") (isset .Params "color_a") (isset .Params "color_b") }}
         <style>
+            {{ if  (isset .Params "color_bg") }}
             body{
                 background-color: {{ .Params.color_bg }};
             }
-            h2{
-                color: {{ .Params.color_a }}
-            }
-            strong, b{
-                color: {{ .Params.color_a }}
-            }
+            {{ end }}
+            {{ if  (isset .Params "color_b") }}
             h3{
                 color: {{ .Params.color_b }}
             }
+            {{ end }}
+            {{ if  (isset .Params "color_markpen") }}
+            .markpen{
+                background-image: linear-gradient(to bottom, transparent 60%, {{ .Params.color_markpen | safeCSS }} 60%);
+            {{ end }}
         </style>
-        {{ end }}
+        
 
         {{ if .Params.feature_img }}
         <img class="post-cover" src="/images/{{ .Params.feature_img }}">

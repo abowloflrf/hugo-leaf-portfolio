@@ -1,11 +1,11 @@
 <div class="nav-wrapper">
 
-    {{ if hasPrefix .URL "/about" }}
+    {{ if hasPrefix .RelPermalink "/about" }}
     
     {{ else if .NextInSection }}
         {{ with .NextInSection }}
         <div class="nav-back-icon nav-icon">
-            <a href="{{.Permalink}}"><i class="material-icons">arrow_back</i></a>
+            <a href="{{.RelPermalink}}"><i class="material-icons">arrow_back</i></a>
         </div>
         {{ end }}
     {{ else }}
