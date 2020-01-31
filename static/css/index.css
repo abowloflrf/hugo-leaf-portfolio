@@ -162,3 +162,27 @@
         width: 55%;
     }
 }
+
+@media (max-width: 640px) {
+    .sidebar {
+        position: relative;
+        top: unset;
+        left: unset;
+        bottom: unset;
+        width: 100%;
+        padding: 40px;
+        z-index: 1;
+    }
+    .sidebar .sidebar-introduction {
+        padding-top: 10px;
+    }
+    .sidebar .sidebar-self {
+        position: absolute;
+        width: 60%;
+        filter: opacity(0.5);
+    }
+    .content {
+        margin-left: 0;
+        padding: 40px;
+    }
+}
