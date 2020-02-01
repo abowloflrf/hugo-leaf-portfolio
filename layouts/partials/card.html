@@ -1,5 +1,9 @@
 <article class="column is-half post-card">
+    {{ if .Params.disable }}
+    <a class="post-card-image-link" href="{{ .RelPermalink }}" onclick="return false">
+    {{ else }}
     <a class="post-card-image-link" href="{{ .RelPermalink }}">
+    {{ end }}
         <img src="/images/{{ .Params.cover_img }}" />
         <!-- <div class="post-card-image-title"></div> -->
         <div class="post-card-image-text">
